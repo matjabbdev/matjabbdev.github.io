@@ -1,19 +1,3 @@
-// Function to dynamically load and execute sort.js from GitHub Pages
-function loadSortScript(callback) {
-    const script = document.createElement('script');
-    script.src = 'https://matjabbdev.github.io/scripts/sort.js'; // Ensure the full URL is used
-    script.onload = function() {
-        console.log('sort.js loaded and executed');
-        if (typeof callback === 'function') {
-            callback(); // After loading sort.js, execute the clipboard logic
-        }
-    };
-    script.onerror = function() {
-        console.error('Failed to load sort.js');
-    };
-    document.head.appendChild(script);
-}
-
 // Function to copy a given text (link) to the clipboard
 function copyToClipboard(text) {
     const tempInput = document.createElement("input");
@@ -58,5 +42,5 @@ function addClipboardEmojis() {
     });
 }
 
-// Load sort.js from GitHub Pages and then add the clipboard functionality
-loadSortScript(addClipboardEmojis);
+// Run the function to add clipboard functionality to the links
+addClipboardEmojis();
