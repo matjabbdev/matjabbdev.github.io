@@ -1,7 +1,7 @@
 // Function to dynamically load and execute sort.js from GitHub Pages
 function loadSortScript(callback) {
     const script = document.createElement('script');
-    script.src = 'https://matjabbdev.github.io/scripts/sort.js'; // Full URL to sort.js on GitHub Pages
+    script.src = 'https://matjabbdev.github.io/scripts/sort.js'; // Ensure the full URL is used
     script.onload = function() {
         console.log('sort.js loaded and executed');
         if (typeof callback === 'function') {
